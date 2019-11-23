@@ -28,3 +28,11 @@ docker run --rm --name eureka-server --network micro-service -p 8761:8761 haoyiz
 ```shell script
 docker run --rm --name eureka-producer --network micro-service -p 8080:8080 haoyizebo/eureka-producer:latest
 ```
+
+### 制作镜像命令
+```shell script
+docker build -t flagship/eureka-consumer:1.0-SNAPSHOT .
+```
+```shell script
+docker run --rm --name eureka-consumer --network micro-service -d -p 8070:8070 flagship/eureka-consumer:1.0-SNAPSHOT
+```
